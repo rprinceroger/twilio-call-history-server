@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "29870645-7ca6-413e-8d3e-817817a8e0c9",
+		"name": "Twilio-Call-Log",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28880273"
+	},
+	"item": [
+		{
+			"name": "GET /fetch-call-history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDate\": \"2023-01-01T00:00:00Z\",\r\n    \"endDate\": \"2023-02-15T23:59:59Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/fetch-call-history?startDate=2023-01-01T00:00:00Z&endDate=2023-02-15T23:59:59Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"fetch-call-history"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2023-01-01T00:00:00Z"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-02-15T23:59:59Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /export-to-excel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDate\": \"2023-01-01T00:00:00Z\",\r\n    \"endDate\": \"2023-02-15T23:59:59Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/export-to-excel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"export-to-excel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
